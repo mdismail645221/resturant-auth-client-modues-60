@@ -3,7 +3,7 @@ import app from "../firebase/firebase.config";
 import {getAuth} from 'firebase/auth'
 
 
-const AuthProvider = createContext();
+export const AuthProvider = createContext();
 
 const UseContext = ({children}) =>{
 
