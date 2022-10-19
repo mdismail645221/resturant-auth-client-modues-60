@@ -38,11 +38,19 @@ const UseContext = ({children}) =>{
     }
 
 
+const [products, setPorduct] = useState([])
     // Home data loader in useEffect 
-  
+    useEffect(() => {
+        fetch('https://restcountries.com/v3.1/all')
+            .then(res => res.json())
+            .then(data => setPorduct(data))
+            .catch(error => {
+                console.error(error)
+        })
+    }, [products]);
 
 
-    const authInfo = { createUser, signIn, user, logOut }
+    const authInfo = { createUser, signIn, user, logOut, products }
 
 
 

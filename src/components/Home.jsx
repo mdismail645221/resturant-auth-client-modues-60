@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthProvider } from '../contexts/UseContext';
+import Food from './Food';
 
 const Home = () => {
+
+
+
     return (
         <div>
-            <p>Home</p>
+            
         </div>
     );
 };

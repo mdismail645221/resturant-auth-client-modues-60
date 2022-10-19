@@ -9,7 +9,7 @@ const Main = () =>{
         <div>
             <Container >
                 <Header></Header>
-                <Container className="py-5 shadow rounded vh-100">
+                <Container className="py-5 shadow rounded">
                      <Outlet></Outlet>
                 </Container>
                 <Footer></Footer>
