@@ -25,10 +25,13 @@ const UseContext = ({children}) =>{
 
     // onAuthStateChanged UseEffect 
     useEffect(() => {
-        onAuthStateChanged(auth, currentUser => {
+       const unSubcribed = onAuthStateChanged(auth, currentUser => {
             console.log('onAuthStateChanged UseEffect', currentUser);
             setUser(currentUser)
         })
+        return () => {
+            unSubcribed()
+        }
     },[])
 
 

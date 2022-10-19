@@ -26,6 +26,7 @@ const Login = () => {
                 console.log(user)
                 toast("Successfully Login");
                 form.reset()
+                SetError(null)
                 return <Navigate to='/'></Navigate>
             })
             .catch(error => {
